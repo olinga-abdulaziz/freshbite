@@ -68,7 +68,7 @@ if (isset($_POST['btnAddCart'])) {
           $sql_update_quantity="UPDATE `products` SET `quantity`='$new_quantity' WHERE product='$product'";
           $update_q=mysqli_query($conn,$sql_update_quantity);
           if ($exec_insert) {
-            $sql_insert_sales="INSERT INTO `sales`(`id`, `product`, `size`, `quantity`, `price`, `date`) VALUES (null,'$product','$size','$quantity','$amout','$date')";
+            $sql_insert_sales="INSERT INTO `sales`(`id`, `product`, `size`, `quantity`, `price`, `date`,`method`) VALUES (null,'$product','$size','$quantity','$amout','$date','$method')";
             $exe_sales=mysqli_query($conn,$sql_insert_sales);
             if ($exe_sales) {
                 

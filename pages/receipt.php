@@ -47,6 +47,7 @@
                             <th>QUANTITY</th>
                             <th>SIZE</th>
                             <th>AMOUNT</th>
+                            <th>METHOD</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -67,6 +68,7 @@
                                 $size=$row['size'];
                                 $quantity=$row['quantity'];
                                 $amout=$row['amount'];
+                                $method=$row['method'];
                                 $date=date('d/m/y');
                               
                         ?>
@@ -75,6 +77,7 @@
                             <td><?php echo $size ?></td>
                             <td><?php echo $quantity ?></td>
                             <td>KES <?php echo $amout ?></td>
+                            <td><?php echo $method ?></td>
                         </tr>
                         <?php }} ?>
                         

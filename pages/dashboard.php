@@ -124,6 +124,7 @@
                                     <th>PRODUCT</th>
                                     <th>QUANTITY/KGS</th>
                                     <th>AMOUNT</th>
+                                    <th>METHOD</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -141,6 +142,7 @@
                                 $size=$row['size'];
                                 $quantity=$row['quantity'];
                                 $amout=$row['amount'];
+                                $method=$row['method'];
 
                               
                         ?>
@@ -148,6 +150,7 @@
                                     <td><?php echo $product ?></td>
                                     <td><?php echo $quantity ?></td>
                                     <td>KES <?php echo $amout ?></td>
+                                    <td>KES <?php echo $method ?></td>
                                 </tr>
                                 <?php }} ?>
                             </tbody>

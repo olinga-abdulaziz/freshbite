@@ -53,7 +53,7 @@
                             <th>DATE</th>
                             <th>PRODUCT</th>
                             <th>QUANTITY</th>
-                            <!-- <th>SIZE</th> -->
+                            <th>METHOD</th>
                             <th>AMOUNT</th>
                             <th>EDIT</th>
                             <th>DELETE</th>
@@ -76,6 +76,7 @@
                                 $amout=$row['price'];
                                 $date=$row['date'];
                                 $id=$row['id'];
+                                $method=$row['method'];
                               
                         ?>
                         <tr>
@@ -83,6 +84,7 @@
                             <td><?php echo $product ?></td>
                             <td><?php echo $quantity ?></td>
                             <td>KES <?php echo $amout ?></td>
+                            <td> <?php echo $method ?></td>
                             <td>
                                 <form action="editsales.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $id ?>">
