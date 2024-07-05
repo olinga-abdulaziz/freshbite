@@ -157,10 +157,10 @@
                                 echo '
                                  <form action="receipt.php" method="post">
                                     <label for="" class="input-label">Payment Method</label> <br>
-                                    <select name="" id="" class="input">
-                                        <option value="">CASH</option>
-                                        <option value="">MPESA</option>
-                                        <option value="">CREDIT</option>
+                                    <select name="pmethod" id="" class="input">
+                                        <option value="CASH">CASH</option>
+                                        <option value="MPESA">MPESA</option>
+                                        <option value="CREDIT">CREDIT</option>
                                     </select>
                                     <br><br>
                                      
