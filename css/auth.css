@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-image: url('../images/meat4.jpg');
+    align-items: center;
+}
+.form-div{
+    background-color: rgb(25, 25, 34);
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 3px 5px 6px gray;
+}
+a{
+    color: wheat;
+}
+.input-div{
+    padding: 10px;
+}
+.input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+.btnLogin{
+    width: 200px;
+    border: none;
+    color: rgb(25, 25, 34);
+    padding: 10px;
+    border-radius: 5px;
+}
