@@ -1,8 +1,10 @@
 <?php
 if (isset($_POST['btnAddCart'])) {
-    $size=$_POST['size'];
+    // $size=$_POST['size'];
     $quantity=$_POST['quantity'];
     $GLOBALS['product']="Normal Beef";
+    $GLOBALS['method']="CASH";
+
     if (isset($_POST['product'])) {
         $prod=$_POST['product'];
 
@@ -26,6 +28,25 @@ if (isset($_POST['btnAddCart'])) {
                 break;
         }
     }
+    if (isset($_POST['method'])) {
+        $meth=$_POST['method'];
+
+
+        switch ($meth) {
+            case 'CASH':
+                $method="CASH";
+                break;
+            case 'MPESA':
+                $method="MPESA";
+                break;
+            case 'CREDIT':
+                $method="CREDIT";
+                break;
+            default:
+                $method="CASH";
+                break;
+        }
+    }
     $conn=mysqli_connect("localhost","root","","freshbite");
     $date=date('d/m/y');
     $sql_get="SELECT * FROM `products` WHERE product='$product'";
@@ -40,7 +61,7 @@ if (isset($_POST['btnAddCart'])) {
           $product=$row['product'];
           $price=$row['price'];
           $amout=$quantity*$price;
-          $sql_insert="INSERT INTO `pos`(`id`, `product`, `quantity`, `size`, `amount`, `date`) VALUES (null,'$product','$quantity','N/A','$amout','$date')";
+          $sql_insert="INSERT INTO `pos`(`id`, `product`, `quantity`, `size`, `amount`, `date`, `method`) VALUES (null,'$product','$quantity','N/A','$amout','$date','$method')";
           $exec_insert=mysqli_query($conn,$sql_insert);
           $q_db=$row['quantity'];
           $new_quantity=$q_db-$quantity;
