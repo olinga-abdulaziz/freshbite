@@ -32,7 +32,7 @@
         </div>
         <div class="box2">
         <div class="nav">
-            <div><h2>FRESHBITE  PRODUCTS MANAGEMENT SYSTEM</h2></div>
+            <div><h2>FRESHBITE Egg  PRODUCTS MANAGEMENT SYSTEM</h2></div>
             <div><small>welcome : <?php echo $_SESSION['username']  ?></div>
         </div>
         <div class="box-main">
